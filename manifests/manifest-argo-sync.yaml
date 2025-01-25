@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: diplom-eks
+  name: romskor-eks
   namespace: argocd
 spec:
   project: default
