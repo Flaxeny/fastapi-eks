@@ -11,8 +11,8 @@ env:
   CUSTOM_TAG: ${{ vars.CUSTOM_TAG || 'latest' }}
 
 jobs:
-  build-and-push:
-    runs-on: ubuntu-latest
+  my-job:
+    runs-on: self-hosted
 
     steps:
       - name: Checkout repository
