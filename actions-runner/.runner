@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 2,
+  "agentName": "fastapi-eks-runner",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus25.actions.githubusercontent.com/i4gSBNQh7aUq3UEa5s2PwiWSlUcWrNBJU7Ljvk0wOc5FzIpr3x/",
+  "gitHubUrl": "https://github.com/Flaxeny/fastapi-eks",
+  "workFolder": "_work"
+}

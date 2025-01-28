@@ -9,7 +9,7 @@ async def read_root():
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Simple Page</title>
+        <title>Romskor Page</title>
     </head>
     <body>
         <h1>Romskor page</h1>
