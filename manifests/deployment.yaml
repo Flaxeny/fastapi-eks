@@ -33,3 +33,10 @@ spec:
             port: 80
           initialDelaySeconds: 2
           periodSeconds: 10
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
