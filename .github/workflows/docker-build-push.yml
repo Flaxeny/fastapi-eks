@@ -8,7 +8,7 @@ on:
       - 'app.py'
 
 env:
-  CUSTOM_TAG: ${{ vars.CUSTOM_TAG || 'latest' }}  
+  CUSTOM_TAG: ${{ vars.CUSTOM_TAG || 'latest' }}
 
 jobs:
   build-and-push:
@@ -18,16 +18,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-      - name: Build and push Docker image
+      - name: Build and push Docker image for arm64
         uses: docker/build-push-action@v4
         with:
           context: .
+          platforms: linux/arm64
           push: true
           tags: |
             ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi-eks:${{ env.CUSTOM_TAG }}
