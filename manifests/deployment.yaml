@@ -20,17 +20,17 @@ spec:
       - name: fastapi-eks
         image: flaxen/fastapi-eks:v5-arm64
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         livenessProbe:
           httpGet:
             path: /health
-            port: 8080
+            port: 80
           initialDelaySeconds: 5
           periodSeconds: 10
         readinessProbe:
           httpGet:
             path: /health
-            port: 8080
+            port: 80
           initialDelaySeconds: 2
           periodSeconds: 10
         resources:
