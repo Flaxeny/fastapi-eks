@@ -12,7 +12,7 @@ async def read_root():
         <title>Simple Page</title>
     </head>
     <body>
-        <h1>Welcome to FastAPI!</h1>
+        <h1>Romskor page</h1>
         <p>This is a simple web page served using FastAPI.</p>
         <p>Check the <a href="/health">health status</a> of the application.</p>
         <p>Check the <a href="/time">current time</a>while using app.</p>
