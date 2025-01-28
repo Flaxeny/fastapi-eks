@@ -14,6 +14,7 @@ async def read_root():
     <body>
         <h1>Welcome to FastAPI!</h1>
         <p>This is a simple web page served using FastAPI.</p>
+        <p>Check the <a href="/health">health status</a> of the application.</p>
     </body>
     </html>
     """
