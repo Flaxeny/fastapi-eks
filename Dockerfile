@@ -1,4 +1,4 @@
-FROM python:3.9.21-bookworm
+FROM python:3.12.8-alpine
 
 WORKDIR /app
 
@@ -8,5 +8,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]
 
