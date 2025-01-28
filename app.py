@@ -17,6 +17,9 @@ async def read_root():
     </body>
     </html>
     """
+@app.get("/health", response_class=JSONResponse)
+async def health_check():
+    return {"status": "healthy", "message": "The FastAPI application is running smoothly."}
 
 if __name__ == "__main__":
     import uvicorn
