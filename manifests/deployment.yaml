@@ -18,7 +18,7 @@ spec:
         kubernetes.io/arch: arm64
       containers:
       - name: fastapi-eks
-        image: flaxen/fastapi-eks:v5-arm64
+        image: flaxen/fastapi-eks:v6-arm64
         ports:
         - containerPort: 80
         livenessProbe:
