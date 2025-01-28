@@ -15,12 +15,18 @@ async def read_root():
         <h1>Welcome to FastAPI!</h1>
         <p>This is a simple web page served using FastAPI.</p>
         <p>Check the <a href="/health">health status</a> of the application.</p>
+        <p>Check the <a href="/time">current time</a></p>
     </body>
     </html>
     """
 @app.get("/health", response_class=JSONResponse)
 async def health_check():
     return {"status": "healthy", "message": "The FastAPI application is running smoothly."}
+
+@app.get("/time", response_class=JSONResponse)
+async def get_current_time():
+    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    return {"current_time": current_time}
 
 if __name__ == "__main__":
     import uvicorn
